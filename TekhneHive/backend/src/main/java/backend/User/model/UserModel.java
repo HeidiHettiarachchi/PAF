@@ -16,7 +16,7 @@ public class UserModel {
     private String email;
     private String password;
     private String phone;
-    
+    private String profilePicturePath; // New field for profile picture path
     private String googleProfileImage; // Add this field
     private Set<String> followedUsers = new HashSet<>();
     private Set<String> skills = new HashSet<>(); // Added skills field
