@@ -98,9 +98,7 @@ public class UserModel {
         this.followedUsers = followedUsers;
     }
 
-    public Set<String> getSkills() {
-        return skills;
-    }
+    
 
     public void setSkills(Set<String> skills) {
         this.skills = skills;
