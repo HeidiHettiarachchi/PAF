@@ -97,7 +97,11 @@ public class UserController {
         }
     }
 
-   
+    //Display
+    @GetMapping("/user")
+    List<UserModel> getAllUsers() {
+        return userRepository.findAll();
+    }
 
     @GetMapping("/user/{id}")
     UserModel getUserId(@PathVariable String id) {
