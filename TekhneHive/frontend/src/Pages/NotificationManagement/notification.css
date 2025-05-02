@@ -42,3 +42,12 @@
   padding: 2rem;
   margin-top: 60px;
 }
+
+.modern-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+  transition: transform 0.3s;
+}
