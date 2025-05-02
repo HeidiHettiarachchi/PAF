@@ -67,3 +67,11 @@
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+.gradient-divider {
+  height: 4px;
+  width: 60px;
+  margin: 1rem auto;
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  border-radius: 2px;
+}
