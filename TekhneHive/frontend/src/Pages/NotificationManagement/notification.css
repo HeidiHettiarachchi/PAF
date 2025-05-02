@@ -75,3 +75,8 @@
   background: linear-gradient(90deg, #6366f1, #3b82f6);
   border-radius: 2px;
 }
+
+.header-caption {
+  color: #64748b;
+  font-size: 1.1rem;
+}
