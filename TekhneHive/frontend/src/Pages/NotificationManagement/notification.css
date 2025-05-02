@@ -80,3 +80,9 @@
   color: #64748b;
   font-size: 1.1rem;
 }
+
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
