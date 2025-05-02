@@ -35,3 +35,10 @@
   min-height: 100vh;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
+
+.gradient-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 60px;
+}
