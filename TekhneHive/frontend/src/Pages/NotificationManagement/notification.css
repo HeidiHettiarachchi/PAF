@@ -29,3 +29,9 @@
     gap: 10px;
     width: 100%;
 }
+
+/* Modern container styles from AddNewPost */
+.modern-container {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
