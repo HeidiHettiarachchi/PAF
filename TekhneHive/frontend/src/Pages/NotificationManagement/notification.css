@@ -51,3 +51,7 @@
   transform: translateY(0);
   transition: transform 0.3s;
 }
+
+.modern-card:hover {
+  transform: translateY(-5px);
+}
