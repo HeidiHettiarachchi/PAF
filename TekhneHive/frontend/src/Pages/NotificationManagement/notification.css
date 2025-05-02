@@ -22,3 +22,10 @@
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.noty_action_btn_con{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
