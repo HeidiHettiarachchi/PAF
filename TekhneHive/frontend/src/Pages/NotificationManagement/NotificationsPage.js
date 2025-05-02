@@ -34,6 +34,14 @@ function NotificationsPage() {
     }
   };
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:8080/notifications/${id}`);
+      setNotifications(notifications.filter((n) => n.id !== id));
+    } catch (error) {
+      console.error('Error deleting notification:', error);
+    }
+  };
 }
 
 export default NotificationsPage;
