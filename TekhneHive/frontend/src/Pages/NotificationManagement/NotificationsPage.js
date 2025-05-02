@@ -1,0 +1,39 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './notification.css'
+
+
+function NotificationsPage() {
+  const [notifications, setNotifications] = useState([]);
+  const userId = localStorage.getItem('userID');
+
+  useEffect(() => {
+    const fetchNotifications = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8080/notifications/${userId}`);
+        console.log('API Response:', response.data); // Debugging log
+        setNotifications(response.data);
+      } catch (error) {
+        console.error('Error fetching notifications:', error);
+      }
+    };
+
+    if (userId) {
+      fetchNotifications();
+    } else {
+      console.error('User ID is not available');
+    }
+  }, [userId]);
+
+  const handleMarkAsRead = async (id) => {
+    try {
+      await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
+      setNotifications(notifications.map((n) => (n.id === id ? { ...n, read: true } : n)));
+    } catch (error) {
+      console.error('Error marking notification as read:', error);
+    }
+  };
+
+}
+
+export default NotificationsPage;
