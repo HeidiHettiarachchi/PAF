@@ -107,3 +107,18 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
+
+.action-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.action-icon:hover {
+  color: #6366f1;
+}
+
+.action-icon.delete:hover {
+  color: #ef4444;
+}
