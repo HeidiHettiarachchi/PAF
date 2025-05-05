@@ -32,7 +32,7 @@ function UserLogin() {
         alert('Failed to login!');
       }
     } catch (error) {
-      console.error('Error:', error); //error showing
+      console.error('Error:', error);
     }
   };
 
