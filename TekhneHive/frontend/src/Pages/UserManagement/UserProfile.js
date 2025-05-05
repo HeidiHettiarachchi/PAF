@@ -82,7 +82,13 @@ function UserProfile() {
                                         <span>{userData.skills.join(', ')}</span>
                                     </div>
                                 </div>
-                                
+                                <div className="profile-actions">
+                                    <button onClick={() => navigate(`/updateUserProfile/${userData.id}`)} className="btn-update">
+                                        Update Profile
+                                    </button>
+                                    <button onClick={handleDelete} className="btn-delete">
+                                        Delete Account
+                                    </button>
                                 </div>
                             </div>
                         </div>
