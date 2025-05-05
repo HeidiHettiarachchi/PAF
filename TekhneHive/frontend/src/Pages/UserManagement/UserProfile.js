@@ -40,7 +40,7 @@ function UserProfile() {
                     if (response.ok) {
                         alert("Profile deleted successfully!");
                         localStorage.removeItem('userID');
-                        navigate('/'); // Redirect to home or login Page
+                        navigate('/'); // Redirect to home or login page
                     } else {
                         alert("Failed to delete profile.");
                     }

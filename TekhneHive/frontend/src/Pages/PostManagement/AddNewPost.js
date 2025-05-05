@@ -151,7 +151,7 @@ function AddNewPost() {
                   </div>
                 ))}
               </div>
-
+              
               <div className="dropzone">
                 <input
                   type="file"

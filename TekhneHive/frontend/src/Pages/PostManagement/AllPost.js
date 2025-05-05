@@ -309,15 +309,15 @@ function AllPost() {
 
         <div className="posts-grid">
           {filteredPosts.length === 0 ? (
-            <div className="empty-state" style={{
-              display: 'flex',
+            <div className="empty-state" style={{ 
+              display: 'flex', 
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center'
             }}>
               <div className="empty-state-icon"></div>
               <p>No posts found. Please create a new post.</p>
-              <button
+              <button 
                 onClick={() => window.location.href = '/addNewPost'}
                 className="create-post-btn"
                 style={{ marginTop: '20px' }}
@@ -390,7 +390,7 @@ function AllPost() {
 
                   <div className="post-actions">
                     <div className="action-buttons">
-                      <button
+                      <button 
                         onClick={() => handleLike(post.id)}
                         className={`action-btn ${post.likes?.[localStorage.getItem('userID')] ? 'liked' : ''}`}
                       >
