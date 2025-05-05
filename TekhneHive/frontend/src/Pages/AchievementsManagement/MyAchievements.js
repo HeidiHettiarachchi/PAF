@@ -61,7 +61,15 @@ function MyAchievements() {
           <IoIosCreate className='add_new_btn_icon' />
         </div>
 
-        
+        <div className="posts-grid">
+          {filteredData.length === 0 ? (
+            <div className="empty-state">
+              <div className="empty-state-icon"></div>
+              <p>No achievements found. Please create a new achievement.</p>
+              <button onClick={() => window.location.href = '/addAchievements'}>
+                Create New Achievement
+              </button>
+            </div>
           ) : (
             filteredData.map((progress) => (
               <div key={progress.id} className="post-card">
