@@ -13,7 +13,7 @@ function NotificationsPage() {
     const fetchNotifications = async () => {
       try {
         const response = await axios.get(`http://localhost:8080/notifications/${userId}`);
-        console.log('API Response:', response.data); // Debugging log
+        console.log('API Response is recorded:', response.data); 
         setNotifications(response.data);
       } catch (error) {
         console.error('Error fetching notifications:', error);
@@ -36,7 +36,7 @@ function NotificationsPage() {
       console.error('Error deleting notification:', error);
     }
   };
-  
+
   const handleMarkAsRead = async (id) => {
     try {
       await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
