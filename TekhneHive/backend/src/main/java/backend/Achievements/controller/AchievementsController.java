@@ -42,10 +42,7 @@ public class AchievementsController {
         }
     }
 
-    @GetMapping("/achievements")
-    List<AchievementsModel> getAll() {
-        return achievementsRepository.findAll();
-    }
+    
 
     @GetMapping("/achievements/{id}")
     AchievementsModel getById(@PathVariable String id) {
