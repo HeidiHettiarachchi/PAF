@@ -142,7 +142,21 @@ function AddAchievements() {
                 )}
               </div>
               
-              
+              <div className="dropzone">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  id="file-upload"
+                  className="hidden-input"
+                  required
+                />
+                <label htmlFor="file-upload" className="upload-label">
+                  <div className="upload-icon">📤</div>
+                  <span>Drop image here or click to browse</span>
+                </label>
+              </div>
+            </div>
 
             <button type="submit" className="gradient-button">
               Publish Achievement
