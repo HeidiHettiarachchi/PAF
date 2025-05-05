@@ -376,7 +376,7 @@ function MyAllPost() {
 
                   <div className="post-actions">
                     <div className="action-buttons">
-                      <button
+                      <button 
                         onClick={() => handleLike(post.id)}
                         className={`action-btn ${post.likes?.[localStorage.getItem('userID')] ? 'liked' : ''}`}
                       >
