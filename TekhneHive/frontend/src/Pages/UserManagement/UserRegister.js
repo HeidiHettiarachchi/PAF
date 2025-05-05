@@ -62,57 +62,7 @@ function UserRegister() {
         }
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        let isValid = true;
-
-        if (formData.skills.length < 2) {
-            alert("Please add at least two skills.");
-            isValid = false;
-        }
-        if (!isValid) {
-            return;
-        }
-
-        try {
-            const response = await fetch('http://localhost:8080/user', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    fullname: formData.fullname,
-                    email: formData.email,
-                    password: formData.password,
-                    phone: formData.phone,
-                    skills: formData.skills,
-                    bio: formData.bio,
-                }),
-            });
-
-            if (response.ok) {
-                const userId = (await response.json()).id;
-
-                if (profilePicture) {
-                    const profileFormData = new FormData();
-                    profileFormData.append('file', profilePicture);
-                    await fetch(`http://localhost:8080/user/${userId}/uploadProfilePicture`, {
-                        method: 'PUT',
-                        body: profileFormData,
-                    });
-                }
-
-                sendVerificationCode(formData.email);
-                setIsVerificationModalOpen(true);
-                navigate('/')
-
-            } else if (response.status === 409) {
-                alert('Email already exists!');
-            } else {
-                alert('Failed to register user.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
+    
 
     const handleVerifyCode = () => {
         const savedCode = localStorage.getItem('verificationCode');
