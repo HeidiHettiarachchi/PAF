@@ -201,10 +201,10 @@ function UpdatePost() {
                         Your browser does not support the video tag.
                       </video>
                     ) : (
-                      <img 
-                        className="preview-media" 
-                        src={`http://localhost:8080${mediaUrl}`} 
-                        alt={`Preview ${index}`} 
+                      <img
+                        className="preview-media"
+                        src={`http://localhost:8080${mediaUrl}`}
+                        alt={`Preview ${index}`}
                       />
                     )}
                     <button
@@ -217,7 +217,7 @@ function UpdatePost() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="dropzone">
                 <input
                   type="file"
