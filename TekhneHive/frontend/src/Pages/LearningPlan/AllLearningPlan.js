@@ -8,7 +8,7 @@ import { IoIosCreate } from "react-icons/io";
 import NavBar from '../../Components/NavBar/NavBar';
 import { HiCalendarDateRange } from "react-icons/hi2";
 
-function AllLearningPlan() { // Create the learning plans
+function AllLearningPlan() { 
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [searchOwnerName, setSearchOwnerName] = useState('');
