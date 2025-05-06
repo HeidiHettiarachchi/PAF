@@ -26,7 +26,7 @@ function AllLearningPlan() {
     };
 
     fetchPosts();
-  }, []); // Ensure this runs only once on component mount
+  }, []); // Ensure this runs only once on component 
 
   const getEmbedURL = (url) => {
     try {
