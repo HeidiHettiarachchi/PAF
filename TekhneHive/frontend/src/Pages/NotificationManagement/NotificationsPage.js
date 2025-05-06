@@ -42,7 +42,7 @@ function NotificationsPage() {
       await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
       setNotifications(notifications.map((n) => (n.id === id ? { ...n, read: true } : n)));
     } catch (error) {
-      console.error('Error marking notification as read:', error);
+      console.error('Error updateing notification as read:', error);
     }
   };
 
