@@ -60,7 +60,7 @@ public class AchievementsController {
                     achievementsModel.setTitle(newAchievementsModel.getTitle());
                     achievementsModel.setDescription(newAchievementsModel.getDescription());
                     achievementsModel.setPostOwnerID(newAchievementsModel.getPostOwnerID());
-                    achievementsModel.setPostOwnerName(newAchievementsModel.getPostOwnerName());
+                    
                     achievementsModel.setDate(newAchievementsModel.getDate());
                     achievementsModel.setCategory(newAchievementsModel.getCategory());
                     achievementsModel.setImageUrl(newAchievementsModel.getImageUrl());
