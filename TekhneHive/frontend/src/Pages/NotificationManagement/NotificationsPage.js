@@ -67,6 +67,7 @@ function NotificationsPage() {
               notifications.map((notification) => (
                 <div key={notification.id} className={`notification-card ${notification.read ? 'read' : 'unread'}`}>
                   <div className='notification-content'>
+                    <p></p>
                     <p className='noty_topic'>{notification.message}</p>
                     <p className='noty_time'>{new Date(notification.createdAt).toLocaleString()}</p>
                   </div>
