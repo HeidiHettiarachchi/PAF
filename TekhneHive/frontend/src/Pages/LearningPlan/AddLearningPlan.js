@@ -106,7 +106,7 @@ function AddLearningPlan() {
         category   // New field
       };
 
-      // Submit the post dataa
+      // Submit the post data
       await axios.post('http://localhost:8080/learningPlan', newPost);
       alert('Post added successfully!');
       navigate('/allLearningPlan');
