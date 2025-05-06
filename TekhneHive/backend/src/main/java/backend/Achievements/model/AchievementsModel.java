@@ -47,7 +47,9 @@ public class AchievementsModel {
         this.postOwnerID = postOwnerID;
     }
 
-   
+    public String getPostOwnerName() {
+        return postOwnerName;
+    }
 
     public void setPostOwnerName(String postOwnerName) {
         this.postOwnerName = postOwnerName;
