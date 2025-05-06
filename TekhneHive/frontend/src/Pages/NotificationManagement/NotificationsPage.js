@@ -16,14 +16,14 @@ function NotificationsPage() {
         console.log('API Response is recorded:', response.data); 
         setNotifications(response.data);
       } catch (error) {
-        console.error('Error fetching notifications:', error);
+        console.error('Error fetching the notifications:', error);
       }
     };
 
     if (userId) {
       fetchNotifications();
     } else {
-      console.error('User ID is not available');
+      console.error('User ID is found available');
     }
   }, [userId]);
 
