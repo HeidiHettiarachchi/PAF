@@ -9,17 +9,18 @@ function NotificationsPage() {
   const [notifications, setNotifications] = useState([]);
   const userId = localStorage.getItem('userID');
 
-  useEffect(() => {
-    const fetchNotifications = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/notifications/${userId}`);
-        console.log('API Response is recorded:', response.data); 
-        setNotifications(response.data);
-      } catch (error) {
-        console.error('Error fetching the notifications:', error);
-      }
-    };
 
+  const fetchNotifications = async () => {
+    try {
+      const response = await axios.get(`http://localhost:8080/notifications/${userId}`);
+      console.log('API Response is recorded:', response.data); 
+      setNotifications(response.data);
+    } catch (error) {
+      console.error('Error fetching the notifications:', error);
+    }
+  };
+
+  useEffect(() => {
     if (userId) {
       fetchNotifications();
     } else {
@@ -42,7 +43,7 @@ function NotificationsPage() {
       await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
       setNotifications(notifications.map((n) => (n.id === id ? { ...n, read: true } : n)));
     } catch (error) {
-      console.error('Error updateing notification as read:', error);
+      console.error('Error  notification as read:', error);
     }
   };
 
