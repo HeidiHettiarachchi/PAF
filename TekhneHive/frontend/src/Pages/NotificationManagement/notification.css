@@ -76,6 +76,11 @@
   border-radius: 2px;
 }
 
+.notification-card.unread {
+  background: #fff;
+  border-left: 4px solid #6366f1;
+}
+
 .header-caption {
   color: #64748b;
   font-size: 1.1rem;
@@ -100,9 +105,4 @@
 .notification-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.notification-card.unread {
-  background: #fff;
-  border-left: 4px solid #6366f1;
 }
