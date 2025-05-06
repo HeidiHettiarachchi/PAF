@@ -54,7 +54,7 @@ function NotificationsPage() {
           <div className="card-header">
             <h1>Notifications</h1>
             <div className="gradient-divider"></div>
-            <p className="header-caption">Stay updated with your latest activities</p>
+            <p className="header-caption">Stay updated with your current activities</p>
           </div>
 
           <div className='notifications-container'>
