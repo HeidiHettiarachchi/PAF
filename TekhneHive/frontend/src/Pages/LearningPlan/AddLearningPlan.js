@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { IoMdAdd } from "react-icons/io";
 import './post.css';
-import './Templates.css'; // Import the updated CSS file
+import './Templates.css'; // Import the updated CSS files
 import '../PostManagement/AddNewPost.css'; // Add this import
 import NavBar from '../../Components/NavBar/NavBar';
 import { FaVideo } from "react-icons/fa";
