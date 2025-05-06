@@ -28,7 +28,7 @@ function NotificationsPage() {
   }, [userId]);
 
   
-  const handleDelete = async (id) => {
+  const handleDeleteAction = async (id) => {
     try {
       await axios.delete(`http://localhost:8080/notifications/${id}`);
       setNotifications(notifications.filter((n) => n.id !== id));
@@ -77,7 +77,7 @@ function NotificationsPage() {
                       className='action-icon' 
                     />
                     <RiDeleteBin6Fill
-                      onClick={() => handleDelete(notification.id)}
+                      onClick={() => handleDeleteAction(notification.id)}
                       className='action-icon delete' 
                     />
                   </div>
