@@ -141,8 +141,10 @@
 }
 
 .media-item {
-  grid-column: span 3; /* Makes item span all 3 columns */
-  height: 300px; /* Set a fixed height or adjust as needed */
+  grid-column: span 3;
+  /* Makes item span all 3 columns */
+  height: 300px;
+  /* Set a fixed height or adjust as needed */
   width: 100%;
   position: relative;
 }
@@ -193,18 +195,19 @@
 }
 
 .action-btn:hover {
-  color: #1a73e8;
+  color: #ffb347;
 }
 
 .action-btn.liked {
-  color: #1a73e8;
+  color: #ffb347;
 }
 
 .action-btn svg {
   font-size: 1.25rem;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn,
+.delete-btn {
   padding: 8px;
   border: none;
   background: none;
@@ -236,7 +239,8 @@
   background-color: rgba(220, 53, 69, 0.1);
 }
 
-.edit-btn svg, .delete-btn svg {
+.edit-btn svg,
+.delete-btn svg {
   font-size: 20px;
 }
 
@@ -303,7 +307,8 @@
   position: relative;
   background: transparent;
   width: 100%;
-  height: 80vh; /* Reduced from 100vh to 80vh */
+  height: 80vh;
+  /* Reduced from 100vh to 80vh */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,7 +317,8 @@
 
 .modal-content img {
   max-width: 100%;
-  max-height: 80vh; /* Reduced from 100vh to 80vh */
+  max-height: 80vh;
+  /* Reduced from 100vh to 80vh */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -320,7 +326,8 @@
 
 .modal-content video {
   max-width: 100%;
-  max-height: 80vh; /* Reduced from 100vh to 80vh */
+  max-height: 80vh;
+  /* Reduced from 100vh to 80vh */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -380,20 +387,14 @@
   font-weight: 500;
   transition: 0.8s;
   background-size: 280% auto;
-  background-image: linear-gradient(
-    325deg,
-    var(--btn-bg-2) 0%,
-    var(--btn-bg-1) 55%,
-    var(--btn-bg-2) 90%
-  );
+  background-image: linear-gradient(325deg,
+      var(--btn-bg-2) 0%,
+      var(--btn-bg-1) 55%,
+      var(--btn-bg-2) 90%);
   border: none;
   border-radius: var(--radii);
   color: var(--btn-bg-color);
-  /* box-shadow:
-    0px 0px 20px rgba(71, 184, 255, 0.5),
-    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
-    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
-    inset -4px -4px 8px rgba(19, 95, 216, 0.35); */
+
 }
 
 .follow-btn:hover {
@@ -444,7 +445,7 @@
   filter: url(#goo);
   overflow: hidden;
   position: absolute;
-  border-radius: 12px; 
+  border-radius: 12px;
   top: 0;
   left: 0;
   bottom: -3px;
@@ -482,4 +483,270 @@
 
 .c-button--gooey:hover .c-button__blobs div {
   transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+/* delete button */
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.delete-btn-comment {
+  background-color: transparent;
+  position: relative;
+  border: none;
+  margin-left: 10px;
+}
+
+.delete-btn-comment::after {
+  content: 'delete';
+  position: absolute;
+  top: -130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(168, 7, 7);
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: .2s linear;
+  transition-delay: .2s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.icon {
+  transform: scale(1.2);
+  transition: .2s linear;
+  cursor: pointer;
+
+}
+
+.delete-btn-comment:hover>.icon {
+  transform: scale(1.5);
+  cursor: pointer;
+
+}
+
+.delete-btn-comment:hover>.icon path {
+  fill: rgb(168, 7, 7);
+  cursor: pointer;
+
+}
+
+.delete-btn-comment:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
+  cursor: pointer;
+
+}
+
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* edit button */
+
+.edit-btn-comment {
+  background-color: transparent;
+  position: relative;
+  border: none;
+
+}
+
+.edit-btn-comment::after {
+  content: 'edit';
+  position: absolute;
+  top: -130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(35, 174, 4);
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: .2s linear;
+  transition-delay: .2s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.editIcon {
+  transform: scale(1.2);
+  transition: .2s linear;
+  cursor: pointer;
+
+}
+
+.edit-btn-comment:hover>.editIcon {
+  transform: scale(1.5);
+  cursor: pointer;
+
+}
+
+.edit-btn-comment:hover>.editIcon path {
+  fill: rgb(35, 174, 4);
+  cursor: pointer;
+
+}
+
+.edit-btn-comment:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
+  cursor: pointer;
+
+}
+
+
+
+/* save button */
+
+.save-btn-comment {
+  background-color: transparent;
+  position: relative;
+  border: none;
+  margin-top: 10px;
+
+}
+
+.save-btn-comment::after {
+  content: 'save';
+  position: absolute;
+  top: -130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(35, 174, 4);
+  /* padding: 4px 8px; */
+  border-radius: 5px;
+  transition: .2s linear;
+  transition-delay: .2s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.editIcon {
+  transform: scale(1.2);
+  transition: .2s linear;
+  cursor: pointer;
+
+
+
+}
+
+.save-btn-comment:hover>.editIcon {
+  transform: scale(1.5);
+  cursor: pointer;
+
+}
+
+.save-btn-comment:hover>.editIcon path {
+  fill: rgb(35, 174, 4);
+  cursor: pointer;
+
+}
+
+.save-btn-comment:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
+  cursor: pointer;
+
+}
+
+
+/* cancel button */
+
+
+.cancel-btn-comment {
+  background-color: transparent;
+  position: relative;
+  border: none;
+  margin-left: 10px;
+}
+
+.cancel-btn-comment::after {
+  content: 'cancel';
+  position: absolute;
+  top: -130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(168, 7, 7);
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: .2s linear;
+  transition-delay: .2s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.icon {
+  transform: scale(1.2);
+  transition: .2s linear;
+  cursor: pointer;
+
+}
+
+.cancel-btn-comment:hover>.icon {
+  transform: scale(1.5);
+  cursor: pointer;
+
+}
+
+.cancel-btn-comment:hover>.icon path {
+  fill: rgb(168, 7, 7);
+  cursor: pointer;
+
+}
+
+.cancel-btn-comment:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
+  cursor: pointer;
+
 }
