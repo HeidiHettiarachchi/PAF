@@ -91,7 +91,7 @@ function AddLearningPlan() {
         imageUrl = uploadResponse.data;
       }
 
-      // Create the new post object
+      // Create the new post objects
       const newPost = {
         title,
         description,
