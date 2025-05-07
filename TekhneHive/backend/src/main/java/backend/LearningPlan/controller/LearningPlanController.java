@@ -36,7 +36,7 @@ public class LearningPlanController {
     @Autowired
     private NotificationRepository notificationRepository;
 
-    //Insert data
+    //Insert data to learning plan
     @PostMapping("/learningPlan")
     public LearningPlanModel newLearningSystemModel(@RequestBody LearningPlanModel newLearningPlanModel) {
         System.out.println("Received data: " + newLearningPlanModel); // Debugging line
