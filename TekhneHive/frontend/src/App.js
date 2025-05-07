@@ -72,7 +72,7 @@ function App() {
             path="/allLearningPlan"
             element={
               <ProtectedRoute>
-                <AllLearningPlan />
+                <AllLearningPlans />
               </ProtectedRoute>
             }
           />
@@ -80,7 +80,7 @@ function App() {
             path="/myLearningPlan"
             element={
               <ProtectedRoute>
-                <MyLearningPlan />
+                <MyLearningPlans />
               </ProtectedRoute>
             }
           />
@@ -88,7 +88,7 @@ function App() {
             path="/updateLearningPlan/:id"
             element={
               <ProtectedRoute>
-                <UpdateLearningPlan />
+                <UpdateLearningPlans />
               </ProtectedRoute>
             }
           />
