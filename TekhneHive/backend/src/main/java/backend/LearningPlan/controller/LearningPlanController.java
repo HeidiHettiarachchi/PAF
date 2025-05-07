@@ -51,7 +51,7 @@ public class LearningPlanController {
 
         // Set current date and time
         String currentDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-        newLearningPlanModel.setCreatedAt (currentDateTime);
+        newLearningPlanModel.setCreatedAt(currentDateTime);
 
         return learningPlanRepository.save(newLearningPlanModel);
     }
