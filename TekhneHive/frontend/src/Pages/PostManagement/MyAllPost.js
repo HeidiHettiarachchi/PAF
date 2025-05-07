@@ -324,14 +324,14 @@ function MyAllPost() {
                     </div>
                     <div>
                       <p className="owner-name">{postOwners[post.userID] || 'Anonymous'}</p>
-                      {post.userID !== loggedInUserID && (
+                      {/* {post.userID !== loggedInUserID && (
                         <button
                           className={`follow-btn ${followedUsers.includes(post.userID) ? 'following' : ''}`}
                           onClick={() => handleFollowToggle(post.userID)}
                         >
                           {followedUsers.includes(post.userID) ? 'Following' : 'Follow'}
                         </button>
-                      )}
+                      )} */}
                     </div>
                   </div>
                   {post.userID === loggedInUserID && (
