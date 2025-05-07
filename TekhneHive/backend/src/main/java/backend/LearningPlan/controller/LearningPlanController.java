@@ -106,7 +106,7 @@ public class LearningPlanController {
                     learningPlanModel.setTags(newLearningPlanModel.getTags());
                     learningPlanModel.setImageUrl(newLearningPlanModel.getImageUrl());
                     learningPlanModel.setStartDate(newLearningPlanModel.getStartDate()); // Update startDates
-                    learningPlanModel.setEndDate(newLearningPlanModel.getEndDate());     // Update endDate
+                    learningPlanModel.setEndDate(newLearningPlanModel.getEndDate());     // Update endDates
                     learningPlanModel.setCategory(newLearningPlanModel.getCategory());  // Update category
 
                     if (newLearningPlanModel.getPostOwnerID() != null && !newLearningPlanModel.getPostOwnerID().isEmpty()) {
