@@ -263,10 +263,11 @@
   color: #dc3545;
 }
 
+
 .delete-btn:hover {
   color: #bb2d3b;
   background-color: rgba(220, 53, 69, 0.1);
-}
+} 
 
 .edit-btn svg,
 .delete-btn svg {
@@ -521,26 +522,13 @@ border-color: #fbff00;
 
 /* delete button */
 
-.delete-btn {
-  background: #dc3545;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
-}
-
 .delete-btn-comment {
-  background-color: transparent;
+  /* background-color: rgb(255, 255, 255); */
+  /* background-color: transparent; */
   position: relative;
   border: none;
   margin-left: 10px;
+  
 }
 
 .delete-btn-comment::after {
@@ -556,12 +544,12 @@ border-color: #fbff00;
   border-radius: 5px;
   transition: .2s linear;
   transition-delay: .2s;
-  color: white;
   text-transform: uppercase;
   font-size: 12px;
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
+  
 }
 
 .icon {
@@ -574,6 +562,8 @@ border-color: #fbff00;
 .delete-btn-comment:hover>.icon {
   transform: scale(1.5);
   cursor: pointer;
+  fill: rgb(168, 7, 7);
+
 
 }
 
@@ -588,11 +578,13 @@ border-color: #fbff00;
   opacity: 1;
   top: -160%;
   cursor: pointer;
+  fill: rgb(168, 7, 7);
+
 
 }
 
 
-.delete-btn {
+/* .delete-btn {
   background: #dc3545;
   color: white;
   padding: 12px 24px;
@@ -605,7 +597,7 @@ border-color: #fbff00;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
-}
+} */
 
 /* edit button */
 
@@ -783,4 +775,12 @@ border-color: #fbff00;
   top: -160%;
   cursor: pointer;
 
+}
+
+
+.edit-btn-comment,
+.delete-btn-comment,
+.save-btn-comment,
+.cancel-btn-comment {
+  color: white;
 }

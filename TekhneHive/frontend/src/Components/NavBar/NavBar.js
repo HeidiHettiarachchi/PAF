@@ -65,12 +65,14 @@ function NavBar() {
     const currentPath = window.location.pathname;
 
     return (
-        <div className={`navbar ${isVisible ? 'navbar_visible' : 'navbar_hidden'}`}>
-            <div className="nav_con">
+        <div className={`navbar ${isVisible ? 'navbar_visible' : 'navbar_hidden'}`} style={{ backgroundColor: 'black' }}>
+            <div className="nav_con" >
                 <div className='nav_item_set'>
                     <div className='side_logoo'>
                         <img src={LogoCover} alt="Logo Cover" className="nav_logocover" onClick={() => window.location.href = '/allPost'} />
+                        <h1 className="webName"> TekhneHive</h1>
                     </div>
+                    
                     <div className='nav_bar_item'>
 
                         <p
