@@ -111,7 +111,7 @@ public class LearningPlanController {
 
                     if (newLearningPlanModel.getPostOwnerID() != null && !newLearningPlanModel.getPostOwnerID().isEmpty()) {
                         learningPlanModel.setPostOwnerID(newLearningPlanModel.getPostOwnerID());
-                        // Fetch and update the real name of the post owner
+                        // Fetch and update the real names of the post owner
                         String postOwnerName = userRepository.findById(newLearningPlanModel.getPostOwnerID())
                                 .map(user -> user.getFullname())
                                 .orElseThrow(() -> new ResourceNotFoundException("User not found for ID: " + newLearningPlanModel.getPostOwnerID()));
