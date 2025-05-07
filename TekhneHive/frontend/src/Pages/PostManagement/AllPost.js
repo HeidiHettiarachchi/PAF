@@ -292,7 +292,7 @@ function AllPost() {
     <div className="posts-container">
       <NavBar />
       <div className="content-wrapper">
-        <div className="search-section" style={{ marginTop: '40px' }}>
+        <div className="search-section" style={{ marginTop: '40px', background: 'rgb(0,0,0)' }}>
           <input
             type="text"
             className="search-input"
@@ -334,6 +334,7 @@ function AllPost() {
         <div className="posts-grid">
           {filteredPosts.length === 0 ? (
             <div className="empty-state" style={{
+            
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -351,11 +352,10 @@ function AllPost() {
             </div>
           ) : (
             filteredPosts.map((post) => (
-              <div key={post.id} className="post-card">
+              <div key={post.id} className="post-card" style={{  background: 'rgb(0,0,0)', color: 'white',borderStyle: 'solid', borderColor: '#fbff00'}}>
                 <div className="post-header">
                   <div className="post-owner">
                     <div className="owner-avatar">
-                      {/* You can replace this with actual user avatar if available */}
                       <span className="owner-avatar-placeholder">
                         {(postOwners[post.userID] || 'A')[0].toUpperCase()}
                       </span>
@@ -386,9 +386,9 @@ function AllPost() {
                 </div>
 
                 <div className="post-content">
-                  <h2 className="post-title">{post.title}</h2>
-                  <p className="post-description">{post.description}</p>
-                  <p className="post-category">Category: {post.category || 'Uncategorized'}</p>
+                  <h2 className="post-title" style={{ color: 'white'}}>{post.title}</h2>
+                  <p className="post-description" style={{ color: 'white'}}>{post.description}</p>
+                  <p className="post-category" style={{ color: '#fbff00'}}>Category: {post.category || 'Uncategorized'}</p>
 
                   <div className="media-grid">
                     {post.media.slice(0, 1).map((mediaUrl, index) => (
@@ -414,8 +414,8 @@ function AllPost() {
                   </div>
 
                   <div className="post-actions">
-                    <div className="action-buttons">
-                      <button
+                    <div className="action-buttons" >
+                      <button 
                         onClick={() => handleLike(post.id)}
                         className={`action-btn ${post.likes?.[localStorage.getItem('userID')] ? 'liked' : ''}`}
                       >
@@ -429,8 +429,8 @@ function AllPost() {
                     </div>
                   </div>
 
-                  <div className="comments-section">
-                    <div className="add-comment">
+                  <div className="comments-section" style={{ background: 'black'}}>
+                    <div className="add-comment" >
                       <input
                         type="text"
                         placeholder="Add a comment"
@@ -445,7 +445,7 @@ function AllPost() {
                     {post.comments?.map((comment) => (
                       <div key={comment.id} className="comment">
                         <div>
-                          <p>{comment.userFullName}</p>
+                          <p className="comment-name" style={{ color: '#fbff00', fontWeight: 'bold'}}>{comment.userFullName}</p>
                           {editingComment.id === comment.id ? (
                             <input
                               type="text"
@@ -457,7 +457,9 @@ function AllPost() {
                             />
                           ) : (
                             <p>{comment.content}</p>
+                          
                           )}
+                          <br/>
                         </div>
                         <div className="comment-actions">
                           {comment.userID === loggedInUserID && (
