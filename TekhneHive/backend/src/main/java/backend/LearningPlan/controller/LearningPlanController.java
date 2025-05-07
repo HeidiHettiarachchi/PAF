@@ -168,7 +168,7 @@ public class LearningPlanController {
                         }
                     }
                 } catch (Exception e) {
-                    System.err.println("Error processing plan with ID: " + plan.getId() + ". Error: " + e.getMessage());
+                    System.err.println("Error processing plan with ID; " + plan.getId() + ". Error: " + e.getMessage());
                 }
             }
         });
