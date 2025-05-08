@@ -224,7 +224,7 @@ function AddLearningPlan() {
             </div>
           </div>
           <div className="modern-container" style={{maxWidth: '600px', margin: '0 auto'}}>
-            <div className="modern-card">
+            <div className="modern-card" style={{ borderStyle: 'solid', borderColor:'#fbff00'}}>
               <div className="card-header">
                 <h1>Create Learning Plan</h1>
                 <div className="gradient-divider"></div>
