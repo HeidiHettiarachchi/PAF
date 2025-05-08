@@ -13,6 +13,7 @@ import { GrUpdate } from "react-icons/gr";
 import { FiSave } from "react-icons/fi";
 import { TbPencilCancel } from "react-icons/tb";
 import { FaCommentAlt } from "react-icons/fa";
+import './AllPost.css';
 Modal.setAppElement('#root');
 
 function MyAllPost() {
@@ -297,9 +298,15 @@ function MyAllPost() {
           />
           <button
             onClick={() => window.location.href = '/addNewPost'}
-            className="create-post-btn"
+            className="c-button c-button--gooey"
           >
             <IoIosCreate /> Create Post
+            <div className="c-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
           </button>
         </div>
 
@@ -308,8 +315,17 @@ function MyAllPost() {
             <div className="empty-state">
               <div className="empty-state-icon"></div>
               <p>No posts found. Please create a new post.</p>
-              <button onClick={() => window.location.href = '/addNewPost'}>
-                Create New Post
+              <button
+                onClick={() => window.location.href = '/addNewPost'}
+                className="c-button c-button--gooey"
+              >
+                <IoIosCreate /> Create Post
+                <div className="c-button__blobs">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+
               </button>
             </div>
           ) : (
@@ -347,9 +363,9 @@ function MyAllPost() {
                 </div>
 
                 <div className="post-content">
-                  <h2 className="post-title">{post.title}</h2>
-                  <p className="post-description">{post.description}</p>
-                  <p className="post-category">Category: {post.category || 'Uncategorized'}</p>
+                  <h2 className="post-title" style={{ color: '#fbff00' }}>{post.title}</h2>
+                  <p className="post-description" style={{ color: '#ffffff' }}>{post.description}</p>
+                  <p className="post-category" style={{ color: '#ffffff' }}>Category: {post.category || 'Uncategorized'}</p>
 
                   <div className="media-grid">
                     {post.media.slice(0, 4).map((mediaUrl, index) => (
@@ -391,7 +407,7 @@ function MyAllPost() {
                   </div>
 
                   <div className="comments-section">
-                    <div className="add-comment">
+                    <div className="add-comment" style={{ color: 'white' }}>
                       <input
                         type="text"
                         placeholder="Add a comment"
@@ -404,9 +420,9 @@ function MyAllPost() {
                     </div>
 
                     {post.comments?.map((comment) => (
-                      <div key={comment.id} className="comment">
+                      <div key={comment.id} className="comment" style={{ color: 'white' }}>
                         <div>
-                          <p>{comment.userFullName}</p>
+                          <p style={{ color: '#fbff00' }}>{comment.userFullName}</p>
                           {editingComment.id === comment.id ? (
                             <input
                               type="text"
@@ -425,28 +441,52 @@ function MyAllPost() {
                             <>
                               {editingComment.id === comment.id ? (
                                 <>
-                                  <button onClick={() => handleSaveComment(post.id, comment.id, editingComment.content)}>
-                                    <FiSave />
+                                  <button className="save-btn-comment"
+                                    onClick={() =>
+                                      handleSaveComment(post.id, comment.id, editingComment.content)
+                                    }
+                                  >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="editIcon" viewBox="0 0 16 16">
+                                      <path d="M13.485 1.929a1 1 0 0 1 0 1.414L6.414 10.414l-3.9-3.9a1 1 0 1 1 1.414-1.414l2.485 2.485 6.657-6.657a1 1 0 0 1 1.414 0z" />
+                                    </svg>
+
                                   </button>
-                                  <button onClick={() => setEditingComment({})}>
-                                    <TbPencilCancel />
+                                  <button className="cancel-btn-comment" onClick={() => setEditingComment({})}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="icon" viewBox="0 0 16 16">
+                                      <path d="M2.5 2.5l11 11m0-11l-11 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                    </svg>
                                   </button>
                                 </>
                               ) : (
                                 <>
-                                  <button onClick={() => setEditingComment({ id: comment.id, content: comment.content })}>
-                                    <GrUpdate />
+
+                                  <button className="edit-btn-comment"
+                                    onClick={() =>
+                                      setEditingComment({ id: comment.id, content: comment.content })
+                                    }
+                                  >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="editIcon" viewBox="0 0 16 16">
+                                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706l-1.292 1.292-2.148-2.148L13.354.5a.5.5 0 0 1 .707 0l1.44 1.44zM1 13.5V16h2.5l9.255-9.255-2.148-2.148L1 13.5z" />
+                                    </svg>
+
+
                                   </button>
-                                  <button onClick={() => handleDeleteComment(post.id, comment.id)}>
-                                    <MdDelete />
-                                  </button>
+                                  <button className="delete-btn-comment"  onClick={() => handleDeleteComment(post.id, comment.id)} >
+
+<svg viewBox="0 0 15 17.5" height="17.5" width="15" xmlns="http://www.w3.org/2000/svg" class="icon">
+  <path transform="translate(-2.5 -1.25)" d="M15,18.75H5A1.251,1.251,0,0,1,3.75,17.5V5H2.5V3.75h15V5H16.25V17.5A1.251,1.251,0,0,1,15,18.75ZM5,5V17.5H15V5Zm7.5,10H11.25V7.5H12.5V15ZM8.75,15H7.5V7.5H8.75V15ZM12.5,2.5h-5V1.25h5V2.5Z" id="Fill"></path>
+</svg>
+
+
+
+</button>
                                 </>
                               )}
                             </>
                           )}
                           {post.userID === loggedInUserID && comment.userID !== loggedInUserID && (
                             <button onClick={() => handleDeleteComment(post.id, comment.id)}>
-                              <MdDelete />
+                              <MdDelete className="delete-btn" />
                             </button>
                           )}
                         </div>

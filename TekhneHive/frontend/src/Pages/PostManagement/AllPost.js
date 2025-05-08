@@ -473,7 +473,6 @@ function AllPost() {
                                       handleSaveComment(post.id, comment.id, editingComment.content)
                                     }
                                   >
-                                    {/* <FiSave /> */}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="editIcon" viewBox="0 0 16 16">
                                       <path d="M13.485 1.929a1 1 0 0 1 0 1.414L6.414 10.414l-3.9-3.9a1 1 0 1 1 1.414-1.414l2.485 2.485 6.657-6.657a1 1 0 0 1 1.414 0z" />
                                     </svg>
