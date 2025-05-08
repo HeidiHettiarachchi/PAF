@@ -40,7 +40,7 @@ function UserProfile() {
                     if (response.ok) {
                         alert("Profile deleted successfully!");
                         localStorage.removeItem('userID');
-                        navigate('/'); // Redirect to home or login Page
+                        navigate('/'); // Redirect to home or login page
                     } else {
                         alert("Failed to delete profile.");
                     }
@@ -67,9 +67,9 @@ function UserProfile() {
                             )}
                             <div className="profile-info">
                                 <h1 className="profile-name">{userData.fullname}</h1>
-                                <p className="profile-bio">{userData.bio}</p>
-                                <div className="profile-contact">
-                                    <div className="contact-item">
+                                <p className="profile-bio" style={{ color: 'black'}}>{userData.bio}</p>
+                                <div className="profile-contact" >
+                                    <div className="contact-item" style={{ color: 'black'}}>
                                         <FaEnvelope className="contact-icon" />
                                         <span>{userData.email}</span>
                                     </div>
@@ -86,6 +86,8 @@ function UserProfile() {
                                     <button onClick={() => navigate(`/updateUserProfile/${userData.id}`)} className="btn-update">
                                         Update Profile
                                     </button>
+                                    
+
                                     <button onClick={handleDelete} className="btn-delete">
                                         Delete Account
                                     </button>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import GoogalLogo from './img/glogo.png';
 import { IoMdAdd } from "react-icons/io";
-import { useNavigate } from 'react-router-dom';
 
 function UserRegister() {
     const [formData, setFormData] = useState({
@@ -20,7 +19,6 @@ function UserRegister() {
     const [userEnteredCode, setUserEnteredCode] = useState('');
     const [skillInput, setSkillInput] = useState('');
     const [currentStep, setCurrentStep] = useState(1);
-    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -102,8 +100,6 @@ function UserRegister() {
 
                 sendVerificationCode(formData.email);
                 setIsVerificationModalOpen(true);
-                navigate('/')
-
             } else if (response.status === 409) {
                 alert('Email already exists!');
             } else {

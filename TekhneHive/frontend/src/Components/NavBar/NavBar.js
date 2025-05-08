@@ -69,8 +69,9 @@ function NavBar() {
             <div className="nav_con" >
                 <div className='nav_item_set'>
                     <div className='side_logoo'>
+                    <h1 className="webName"> TekhneHive</h1>
                         <img src={LogoCover} alt="Logo Cover" className="nav_logocover" onClick={() => window.location.href = '/allPost'} />
-                        <h1 className="webName"> TekhneHive</h1>
+                       
                     </div>
                     
                     <div className='nav_bar_item'>

@@ -515,6 +515,11 @@
   text-decoration: underline;
 }
 
+.logo{
+  width:50%; 
+  height:50%;
+}
+
 .login-page {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -794,20 +799,3 @@
   }
 }
 
-.name, 
-.quote{
-
-  color: #000000;
-}
-
-.quote{
-  font-style:italic;
-}
-
-
-.login_logo{
-
-width: 50%;
-height: 50%;
-
-}
