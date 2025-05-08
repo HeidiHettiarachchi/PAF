@@ -1,6 +1,9 @@
 @import '../PostManagement/AddNewPost.css';
 
-/* Achievement-specific styles */
+.container{
+  background-color: rgb(0, 0, 0);
+}
+
 .preview-box {
   aspect-ratio: 1;
   border-radius: 12px;

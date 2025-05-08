@@ -67,7 +67,7 @@ function AddAchievements() {
   };
 
   return (
-    <div className="modern-container">
+    <div className="container">
       <NavBar />
       <div className="gradient-wrapper">
         <div className="modern-card">

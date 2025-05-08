@@ -109,8 +109,8 @@ function AllAchievements() {
                       </span>
                     </div>
                     <div>
-                      <p className="owner-name" style={{ color: '#000000'}}>{progress.postOwnerName}</p>
-                      <p className="post-date" style={{ color: '#000000'}}>{progress.date}</p>
+                      <p className="owner-name" style={{ color: '#ffffff'}}>{progress.postOwnerName}</p>
+                      <p className="post-date" style={{ color: '#ffffff'}}>{progress.date}</p>
                     </div>
                   </div>
                   {progress.postOwnerID === userId && (
@@ -125,9 +125,9 @@ function AllAchievements() {
                   )}
                 </div>
 
-                <div className="post-content">
-                  <h2 className="post-title">{progress.title}</h2>
-                  <p className="post-description" style={{ whiteSpace: "pre-line" }}>{progress.description}</p>
+                <div className="post-content" >
+                  <h2 className="post-title" style={{ color: '#fbff00'}}>{progress.title}</h2>
+                  <p className="post-description" style={{ whiteSpace: "pre-line", color: 'white' }}>{progress.description}</p>
 
                   {progress.imageUrl && (
                     <div className="media-grid">

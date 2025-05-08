@@ -96,7 +96,7 @@ function UserLogin() {
           </form>
 
           <p className="register-link">
-            New to BlogSpace? 
+            New to TekhneHive? 
             <span onClick={() => window.location.href = '/register'}>
               Create an account
             </span>

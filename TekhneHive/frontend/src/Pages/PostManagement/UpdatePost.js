@@ -140,7 +140,7 @@ function UpdatePost() {
   }
 
   return (
-    <div className="modern-container">
+    <div className="container" style={{ backgroundColor: '#000000' }}>
       <NavBar />
       <div className="gradient-wrapper">
         <div className="modern-card">
