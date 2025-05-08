@@ -66,7 +66,12 @@ function MyAchievements() {
             <div className="empty-state">
               <div className="empty-state-icon"></div>
               <p>No achievements found. Please create a new achievement.</p>
-              <button onClick={() => window.location.href = '/addAchievements'}>
+              <button className="achievebtn" onClick={() => window.location.href = '/addAchievements'}
+                style={{
+                  backgroundColor: 'black',
+                  color: 'yellow',
+                  cursor: 'pointer'
+                }}>
                 Create New Achievement
               </button>
             </div>

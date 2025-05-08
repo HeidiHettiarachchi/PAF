@@ -1,3 +1,7 @@
+*{
+  color: white;
+}
+
 .continer {
   width: 1440px;
   margin: 0 auto;
@@ -160,7 +164,7 @@
   font-size: 15px;
 }
 .name_section_post_owner_name {
-  color: black;
+  color: rgb(255, 238, 0);
   font-weight: 600;
   font-size: 19px;
   text-transform: capitalize;

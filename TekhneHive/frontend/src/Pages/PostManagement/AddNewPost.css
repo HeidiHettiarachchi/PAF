@@ -1,7 +1,7 @@
+
 .post-creator {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f6f9fc 0%, #edf2f7 100%);
-}
+  background-color: #000000}
 
 .creator-wrapper {
   padding: 2rem;
@@ -862,16 +862,21 @@
   }
 }
 
-.modern-container {
+/* .modern-container {
   min-height: 100vh;
-  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-color: black;
+} */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #1a1a1a 0%, #1a1a1a 100%);
 }
 
 .gradient-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
   padding: 2rem;
-  margin-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #000000
 }
 
 .modern-card {
@@ -899,11 +904,11 @@
   margin-bottom: 1rem;
 }
 
-.gradient-divider {
+.divider {
   height: 4px;
   width: 60px;
   margin: 1rem auto;
-  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  background: linear-gradient(90deg, #c9c200, #e99300);
   border-radius: 2px;
 }
 
@@ -1027,4 +1032,84 @@
   .modern-card {
     padding: 1.5rem;
   }
+}
+
+
+body{
+  background-color: black;
+}
+
+
+
+.p-button {
+  color: #000000;
+  font-weight: 700;
+  z-index: 1;
+  width: 100%;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.p-button--gooey {
+  color: #070702;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 3px;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.p-button--gooey .p-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.p-button--gooey .p-button__blobs div {
+  background-color: #000000;
+  width: 34%;
+  height: 100%;
+  border-radius: 12px;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.p-button--gooey .p-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.p-button--gooey .p-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.p-button--gooey .p-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.p-button--gooey:hover {
+  color: #fbff00;
+}
+
+.p-button--gooey:hover .p-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
 }

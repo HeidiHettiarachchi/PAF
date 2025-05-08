@@ -1,7 +1,7 @@
 .profile-page {
     height: 100vh;
     overflow: hidden;
-    background: #f8f9fa;
+    background: #000000;
 }
 
 .profile-container {
@@ -23,7 +23,7 @@
     display: flex;
     padding: 2rem;
     gap: 2rem;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #fbcf64, #ffb347);
     color: white;
 }
 
@@ -48,18 +48,21 @@
     font-size: 2.5rem;
     margin: 0 0 0.5rem;
     font-weight: 700;
+    color: black;
 }
 
 .profile-bio {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     opacity: 0.9;
+    color: black;
 }
 
 .profile-contact {
     display: grid;
     gap: 1rem;
     margin-bottom: 2rem;
+    color: black;
 }
 
 .contact-item {
@@ -84,6 +87,8 @@
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s;
+   
+    
 }
 
 .btn-update {
@@ -92,8 +97,8 @@
 }
 
 .btn-delete {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: rgb(244, 5, 5);
+    color: rgb(255, 255, 10);
 }
 
 .btn-update:hover, .btn-delete:hover {

@@ -794,3 +794,20 @@
   }
 }
 
+.name, 
+.quote{
+
+  color: #000000;
+}
+
+.quote{
+  font-style:italic;
+}
+
+
+.login_logo{
+
+width: 50%;
+height: 50%;
+
+}

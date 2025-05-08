@@ -86,13 +86,13 @@ function AddNewPost() {
   };
 
   return (
-    <div className="modern-container">
+    <div className="container" >
       <NavBar />
-      <div className="gradient-wrapper">
-        <div className="modern-card">
+      <div className="gradient-wrapper" >
+        <div className="modern-card" >
           <div className="card-header">
             <h1>Create a Post</h1>
-            <div className="gradient-divider"></div>
+            <div className="divider"></div>
             <p className="header-caption">Share your story with the world</p>
           </div>
 
@@ -168,8 +168,13 @@ function AddNewPost() {
               </div>
             </div>
 
-            <button type="submit" className="gradient-button">
+            <button type="submit" className="p-button p-button--gooey">
               Publish Post
+              <div className="p-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
             </button>
           </form>
         </div>

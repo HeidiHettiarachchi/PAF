@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './user.css';
 import GoogalLogo from './img/glogo.png';
+import Logo from './img/logo.png';
+
+
 
 function UserLogin() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -37,11 +40,13 @@ function UserLogin() {
   };
 
   return (
-    <div className="login-page">
-      <div className="login-left">
-        <div className="brand-section">
-          <h1>BlogSpace</h1>
-          <p>Share your stories with the world</p>
+    <div className="login-page" >
+      <div className="login-left" >
+        <div className="brand-section" >
+                        <img src={Logo} alt="Logo" className="login_logo"  />
+
+          <h1 className="name">TekhneHive</h1>
+          <p className="quote"> Share your skills with the hive!</p>
         </div>
       </div>
       

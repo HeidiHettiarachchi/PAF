@@ -109,8 +109,8 @@ function AllAchievements() {
                       </span>
                     </div>
                     <div>
-                      <p className="owner-name">{progress.postOwnerName}</p>
-                      <p className="post-date">{progress.date}</p>
+                      <p className="owner-name" style={{ color: '#000000'}}>{progress.postOwnerName}</p>
+                      <p className="post-date" style={{ color: '#000000'}}>{progress.date}</p>
                     </div>
                   </div>
                   {progress.postOwnerID === userId && (
