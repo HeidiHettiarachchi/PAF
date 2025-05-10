@@ -44,7 +44,7 @@ function AddLearningPlan() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+     // Date Validations
     if (startDate === endDate) {
       alert("Start date and end date cannot be the same.");
       setIsSubmitting(false);
@@ -56,7 +56,7 @@ function AddLearningPlan() {
       setIsSubmitting(false);
       return;
     }
-
+     //User Authentication Validation
     const postOwnerID = localStorage.getItem('userID');
     const postOwnerName = localStorage.getItem('userFullName');
 
@@ -65,13 +65,13 @@ function AddLearningPlan() {
       navigate('/');
       return;
     }
-
+    //Tags Validation
     if (tags.length < 2) {
       alert("Please add at least two tags.");
       setIsSubmitting(false);
       return;
     }
-
+    //Template Selection Validation
     if (!templateID) {
       alert("Please select a template.");
       setIsSubmitting(false);
