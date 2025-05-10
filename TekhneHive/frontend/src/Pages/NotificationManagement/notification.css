@@ -5,14 +5,14 @@
   text-transform: capitalize;
 }
 .noty_time {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: #000;
   text-transform: capitalize;
   font-style: italic;
 }
 .mark_redbtn {
-  background-color: #004c5d;
+  background-color: #092085;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -33,7 +33,7 @@
 /* Modern container styles from AddNewPost */
 .modern-container {
   min-height: 100vh;
-  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(120deg, #fdfbfb 10%, #ebedee 100%);
 }
 
 .gradient-wrapper {
@@ -44,8 +44,9 @@
 }
 
 .modern-card {
+
+  border-radius: 20px; 
   background: white;
-  border-radius: 20px;
   padding: 2.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transform: translateY(0);
@@ -58,7 +59,7 @@
 
 .card-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .card-header h1 {
@@ -76,6 +77,11 @@
   border-radius: 2px;
 }
 
+.notification-card.unread {
+  background: #fff;
+  border-left: 4px solid #6366f1;
+}
+
 .header-caption {
   color: #64748b;
   font-size: 1.1rem;
@@ -84,7 +90,7 @@
 .notifications-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .notification-card {
@@ -100,9 +106,4 @@
 .notification-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.notification-card.unread {
-  background: #fff;
-  border-left: 4px solid #6366f1;
 }

@@ -9,26 +9,27 @@ function NotificationsPage() {
   const [notifications, setNotifications] = useState([]);
   const userId = localStorage.getItem('userID');
 
-  useEffect(() => {
-    const fetchNotifications = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/notifications/${userId}`);
-        console.log('API Response:', response.data); // Debugging log
-        setNotifications(response.data);
-      } catch (error) {
-        console.error('Error fetching notifications:', error);
-      }
-    };
 
+  const fetchNotifications = async () => {
+    try {
+      const response = await axios.get(`http://localhost:8080/notifications/${userId}`);
+      console.log('API Response is recorded:', response.data); 
+      setNotifications(response.data);
+    } catch (error) {
+      console.error('Error fetching the notifications:', error);
+    }
+  };
+
+  useEffect(() => {
     if (userId) {
       fetchNotifications();
     } else {
-      console.error('User ID is not available');
+      console.error('User ID is found available');
     }
   }, [userId]);
 
   
-  const handleDelete = async (id) => {
+  const handleDeleteAction = async (id) => {
     try {
       await axios.delete(`http://localhost:8080/notifications/${id}`);
       setNotifications(notifications.filter((n) => n.id !== id));
@@ -36,13 +37,13 @@ function NotificationsPage() {
       console.error('Error deleting notification:', error);
     }
   };
-  
+
   const handleMarkAsRead = async (id) => {
     try {
       await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
       setNotifications(notifications.map((n) => (n.id === id ? { ...n, read: true } : n)));
     } catch (error) {
-      console.error('Error marking notification as read:', error);
+      console.error('Error  notification as read:', error);
     }
   };
 
@@ -54,7 +55,7 @@ function NotificationsPage() {
           <div className="card-header">
             <h1>Notifications</h1>
             <div className="gradient-divider"></div>
-            <p className="header-caption">Stay updated with your latest activities</p>
+            <p className="header-caption">Stay updated with your current activities</p>
           </div>
 
           <div className='notifications-container'>
@@ -67,6 +68,7 @@ function NotificationsPage() {
               notifications.map((notification) => (
                 <div key={notification.id} className={`notification-card ${notification.read ? 'read' : 'unread'}`}>
                   <div className='notification-content'>
+                    <p></p>
                     <p className='noty_topic'>{notification.message}</p>
                     <p className='noty_time'>{new Date(notification.createdAt).toLocaleString()}</p>
                   </div>
@@ -77,7 +79,7 @@ function NotificationsPage() {
                       className='action-icon' 
                     />
                     <RiDeleteBin6Fill
-                      onClick={() => handleDelete(notification.id)}
+                      onClick={() => handleDeleteAction(notification.id)}
                       className='action-icon delete' 
                     />
                   </div>
