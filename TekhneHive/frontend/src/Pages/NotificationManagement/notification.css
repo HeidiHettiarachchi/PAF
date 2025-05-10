@@ -106,29 +106,3 @@
   background: #fff;
   border-left: 4px solid #6366f1;
 }
-
-.notification-actions {
-  display: flex;
-  gap: 1rem;
-}
-
-.action-icon {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #64748b;
-  transition: all 0.2s;
-}
-
-.action-icon:hover {
-  color: #6366f1;
-}
-
-.action-icon.delete:hover {
-  color: #ef4444;
-}
-
-.empty-state {
-  text-align: center;
-  padding: 3rem;
-  color: #64748b;
-}
